@@ -24,21 +24,32 @@ import math3d as m3d
 RASPBERRY_BOOL = False
 # If this is run on a linux system, a picamera will be used.
 # If you are using a linux system, with a webcam instead of a raspberry pi delete the following if-statement
-if sys.platform == "linux":
-    import picamera
-    from picamera.array import PiRGBArray
-    RASPBERRY_BOOL = True
+#if sys.platform == "linux":
+    # import picamera
+    # from picamera.array import PiRGBArray
+    # RASPBERRY_BOOL = True
 
-ROBOT_IP = '192.168.178.120'
-ACCELERATION = 0.9  # Robot acceleration value
-VELOCITY = 0.8  # Robot speed value
+ROBOT_IP = '192.168.0.25'
+#ACCELERATION = 0.9  # Robot acceleration value
+#VELOCITY = 0.8  # Robot speed value
+
+ACCELERATION = 0.4  # Robot acceleration value
+VELOCITY = 0.4  # Robot speed value
 
 # The Joint position the robot starts at
+'''
 robot_startposition = (math.radians(-218),
                     math.radians(-63),
                     math.radians(-93),
                     math.radians(-20),
                     math.radians(88),
+                    math.radians(0))
+'''
+robot_startposition = (math.radians(90),
+                    math.radians(-90),
+                    math.radians(90),
+                    math.radians(0),
+                    math.radians(90),
                     math.radians(0))
 
 # Path to the face-detection model:
